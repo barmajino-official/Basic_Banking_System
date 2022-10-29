@@ -1,0 +1,34 @@
+{
+  "FileRequired": {
+    "users": "./src/users.txt",
+    "userslog": "./src/userslog.txt"
+  },
+  "GENDER": [ "Male", "Female" ],
+  "FileConfig": {
+    "users": {
+      "key": [ "ID", "USERNAME", "GENDER", "SALARY", "TIMESTAMP" ],
+      "SetIndexAsPrimaryKey": "ID"
+    },
+    "userslog": {
+      "key": [ "LOGID","ID", "USERNAME", "MESSAGE", "TIMESTAMP" ],
+      "SetIndexAsPrimaryKey": "LOGID"
+    }
+
+  },
+  "addData": {
+    "users": {
+      "ID": [ "random", "int" ],
+      "USERNAME": [ "unique", "str" ],
+      "TIMESTAMP": [ "auto", "TIMESTAMP" ],
+      "GENDER": [ "required", "LIST" ],
+      "SALARY": [ "required", "float" ]
+    }
+  },
+  "index of Admin Menue": [ "Display Statistics", "Display Employees log", "Display all Employees", "Add an Employee", "Change Employee's Salary", "Remove Employee", "Raise Employee's Salary", "Exit" ],
+  "index of User Menue": [ "Check my Salary", "Exit" ],
+  "admin": {
+    "username": "admin",
+    "password": "admin123123"
+  }
+
+}
